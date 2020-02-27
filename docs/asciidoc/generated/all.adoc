@@ -1,0 +1,1075 @@
+= API
+
+
+[[_overview]]
+== 概览
+API
+
+
+=== 联系方式
+[%hardbreaks]
+__名字__ : 威尔数据
+__邮箱__ : admin@weds.com.cn
+
+
+=== 许可信息
+[%hardbreaks]
+__许可证__ : Apache 2.0
+__许可网址__ : http://www.apache.org/licenses/LICENSE-2.0.html
+__服务条款__ : null
+
+
+=== URI scheme
+[%hardbreaks]
+__域名__ : localhost:8093
+__基础路径__ : /api
+
+
+=== 标签
+
+* dt-dep-controller : DtDep管理
+
+
+
+
+[[_paths]]
+== 资源
+
+[[_dt-dep-controller_resource]]
+=== Dt-dep-controller
+DtDep管理
+
+
+[[_deletebatchbykeysusingpost]]
+==== 批量删除DtDep信息
+....
+POST /dtDep/deleteBatchByKeys
+....
+
+
+===== 说明
+批量删除DtDep信息
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Header**|**Authorization** +
+__可选__|Jwt Token|string
+|**Body**|**list** +
+__必填__|list|< <<_dtdepentity,DtDepEntity>> > array
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_3625c36a8ea9cf7285b4f7df3f9f33df,JsonResult«object»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/dtDep/deleteBatchByKeys
+----
+
+
+====== 请求 header
+[source,json]
+----
+"string"
+----
+
+
+====== 请求 body
+[source,json]
+----
+[ {
+  "depDomain" : "test",
+  "depLx" : -1,
+  "depName" : "test",
+  "depNo" : "test",
+  "depNoAdd" : "test",
+  "depNoParent" : "test",
+  "depOrder" : -1,
+  "depParent" : -1,
+  "depRegserial" : "test",
+  "depRule" : "test",
+  "depSerial" : -1,
+  "depTeachserial" : -1,
+  "dicFmtMap" : {
+    "string" : "string"
+  },
+  "id" : -1,
+  "jzDtAbbreviation" : "test",
+  "keys" : "string",
+  "orderByFieldMap" : {
+    "string" : "string"
+  },
+  "params" : "object"
+} ]
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "string",
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_deletebyprimarykeyusingdelete]]
+==== 删除DtDep信息
+....
+DELETE /dtDep/deleteByPrimaryKey
+....
+
+
+===== 说明
+删除DtDep信息
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Header**|**Authorization** +
+__可选__|Jwt Token|string
+|**Query**|**depSerial** +
+__必填__|depSerial|integer (int64)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_3625c36a8ea9cf7285b4f7df3f9f33df,JsonResult«object»>>
+|**204**|No Content|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/dtDep/deleteByPrimaryKey
+----
+
+
+====== 请求 header
+[source,json]
+----
+"string"
+----
+
+
+====== 请求 query
+[source,json]
+----
+{
+  "depSerial" : 0
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "string",
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_insertusingput]]
+==== 新增DtDep信息
+....
+PUT /dtDep/insert
+....
+
+
+===== 说明
+新增DtDep信息
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Header**|**Authorization** +
+__可选__|Jwt Token|string
+|**Body**|**record** +
+__必填__|record|<<_dtdepentity,DtDepEntity>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_3625c36a8ea9cf7285b4f7df3f9f33df,JsonResult«object»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/dtDep/insert
+----
+
+
+====== 请求 header
+[source,json]
+----
+"string"
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "depDomain" : "test",
+  "depLx" : -1,
+  "depName" : "test",
+  "depNo" : "test",
+  "depNoAdd" : "test",
+  "depNoParent" : "test",
+  "depOrder" : -1,
+  "depParent" : -1,
+  "depRegserial" : "test",
+  "depRule" : "test",
+  "depSerial" : -1,
+  "depTeachserial" : -1,
+  "dicFmtMap" : {
+    "string" : "string"
+  },
+  "id" : -1,
+  "jzDtAbbreviation" : "test",
+  "keys" : "string",
+  "orderByFieldMap" : {
+    "string" : "string"
+  },
+  "params" : "object"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "string",
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_insertbatchusingput]]
+==== 批量新增DtDep信息
+....
+PUT /dtDep/insertBatch
+....
+
+
+===== 说明
+批量新增DtDep信息
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Header**|**Authorization** +
+__可选__|Jwt Token|string
+|**Query**|**data** +
+__必填__|data|string
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_3625c36a8ea9cf7285b4f7df3f9f33df,JsonResult«object»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/dtDep/insertBatch
+----
+
+
+====== 请求 header
+[source,json]
+----
+"string"
+----
+
+
+====== 请求 query
+[source,json]
+----
+{
+  "data" : "string"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "string",
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+[[_selectbyprimarykeyusingget]]
+==== 查询DtDep信息
+....
+GET /dtDep/selectByPrimaryKey
+....
+
+
+===== 说明
+查询DtDep信息
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Header**|**Authorization** +
+__可选__|Jwt Token|string
+|**Query**|**depSerial** +
+__必填__|depSerial|integer (int64)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_4916a8ffd119677f44f3d387b249ccd6,JsonResult«DtDepEntity»>>
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/dtDep/selectByPrimaryKey
+----
+
+
+====== 请求 header
+[source,json]
+----
+"string"
+----
+
+
+====== 请求 query
+[source,json]
+----
+{
+  "depSerial" : 0
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "string",
+  "data" : {
+    "depDomain" : "test",
+    "depLx" : -1,
+    "depName" : "test",
+    "depNo" : "test",
+    "depNoAdd" : "test",
+    "depNoParent" : "test",
+    "depOrder" : -1,
+    "depParent" : -1,
+    "depRegserial" : "test",
+    "depRule" : "test",
+    "depSerial" : -1,
+    "depTeachserial" : -1,
+    "dicFmtMap" : {
+      "string" : "string"
+    },
+    "id" : -1,
+    "jzDtAbbreviation" : "test",
+    "keys" : "string",
+    "orderByFieldMap" : {
+      "string" : "string"
+    },
+    "params" : "object"
+  },
+  "msg" : "string"
+}
+----
+
+
+[[_selectlistbyentityusingpost]]
+==== 查询DtDep列表
+....
+POST /dtDep/selectListByEntity
+....
+
+
+===== 说明
+查询DtDep列表
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Header**|**Authorization** +
+__可选__|Jwt Token|string
+|**Body**|**record** +
+__必填__|record|<<_dtdepentity,DtDepEntity>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_c0930cffa50ed00527a165e6938f7a78,JsonResult«List«DtDepEntity»»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/dtDep/selectListByEntity
+----
+
+
+====== 请求 header
+[source,json]
+----
+"string"
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "depDomain" : "test",
+  "depLx" : -1,
+  "depName" : "test",
+  "depNo" : "test",
+  "depNoAdd" : "test",
+  "depNoParent" : "test",
+  "depOrder" : -1,
+  "depParent" : -1,
+  "depRegserial" : "test",
+  "depRule" : "test",
+  "depSerial" : -1,
+  "depTeachserial" : -1,
+  "dicFmtMap" : {
+    "string" : "string"
+  },
+  "id" : -1,
+  "jzDtAbbreviation" : "test",
+  "keys" : "string",
+  "orderByFieldMap" : {
+    "string" : "string"
+  },
+  "params" : "object"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "string",
+  "data" : [ {
+    "depDomain" : "test",
+    "depLx" : -1,
+    "depName" : "test",
+    "depNo" : "test",
+    "depNoAdd" : "test",
+    "depNoParent" : "test",
+    "depOrder" : -1,
+    "depParent" : -1,
+    "depRegserial" : "test",
+    "depRule" : "test",
+    "depSerial" : -1,
+    "depTeachserial" : -1,
+    "dicFmtMap" : {
+      "string" : "string"
+    },
+    "id" : -1,
+    "jzDtAbbreviation" : "test",
+    "keys" : "string",
+    "orderByFieldMap" : {
+      "string" : "string"
+    },
+    "params" : "object"
+  } ],
+  "msg" : "string"
+}
+----
+
+
+[[_selectlistpagebyentityusingpost]]
+==== 查询DtDep清单
+....
+POST /dtDep/selectListPageByEntity
+....
+
+
+===== 说明
+查询DtDep清单
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Header**|**Authorization** +
+__可选__|Jwt Token|string
+|**Body**|**record** +
+__必填__|record|<<_e659e6d7bc9d5f7f523e2ff05e1834de,BasePageSearch«DtDepEntity»>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_72f652c6f6764dd112faf921e8b8b650,JsonResult«BaseCommPager«DtDepEntity»»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/dtDep/selectListPageByEntity
+----
+
+
+====== 请求 header
+[source,json]
+----
+"string"
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "count" : true,
+  "orderBy" : "XXX desc,XXX asc",
+  "pageFlag" : true,
+  "pageIndex" : 1,
+  "pageSize" : 20,
+  "search" : {
+    "depDomain" : "test",
+    "depLx" : -1,
+    "depName" : "test",
+    "depNo" : "test",
+    "depNoAdd" : "test",
+    "depNoParent" : "test",
+    "depOrder" : -1,
+    "depParent" : -1,
+    "depRegserial" : "test",
+    "depRule" : "test",
+    "depSerial" : -1,
+    "depTeachserial" : -1,
+    "dicFmtMap" : {
+      "string" : "string"
+    },
+    "id" : -1,
+    "jzDtAbbreviation" : "test",
+    "keys" : "string",
+    "orderByFieldMap" : {
+      "string" : "string"
+    },
+    "params" : "object"
+  }
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "string",
+  "data" : {
+    "currenRecords" : 0,
+    "pageIndex" : 0,
+    "pageSize" : 0,
+    "records" : [ {
+      "depDomain" : "test",
+      "depLx" : -1,
+      "depName" : "test",
+      "depNo" : "test",
+      "depNoAdd" : "test",
+      "depNoParent" : "test",
+      "depOrder" : -1,
+      "depParent" : -1,
+      "depRegserial" : "test",
+      "depRule" : "test",
+      "depSerial" : -1,
+      "depTeachserial" : -1,
+      "dicFmtMap" : {
+        "string" : "string"
+      },
+      "id" : -1,
+      "jzDtAbbreviation" : "test",
+      "keys" : "string",
+      "orderByFieldMap" : {
+        "string" : "string"
+      },
+      "params" : "object"
+    } ],
+    "totalPage" : 0,
+    "totalRecord" : 0
+  },
+  "msg" : "string"
+}
+----
+
+
+[[_updatebyprimarykeyusingpost]]
+==== 更新DtDep信息
+....
+POST /dtDep/updateByPrimaryKey
+....
+
+
+===== 说明
+更新DtDep信息
+
+
+===== 参数
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|类型|名称|说明|类型
+|**Header**|**Authorization** +
+__可选__|Jwt Token|string
+|**Body**|**record** +
+__必填__|record|<<_dtdepentity,DtDepEntity>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_3625c36a8ea9cf7285b4f7df3f9f33df,JsonResult«object»>>
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/dtDep/updateByPrimaryKey
+----
+
+
+====== 请求 header
+[source,json]
+----
+"string"
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "depDomain" : "test",
+  "depLx" : -1,
+  "depName" : "test",
+  "depNo" : "test",
+  "depNoAdd" : "test",
+  "depNoParent" : "test",
+  "depOrder" : -1,
+  "depParent" : -1,
+  "depRegserial" : "test",
+  "depRule" : "test",
+  "depSerial" : -1,
+  "depTeachserial" : -1,
+  "dicFmtMap" : {
+    "string" : "string"
+  },
+  "id" : -1,
+  "jzDtAbbreviation" : "test",
+  "keys" : "string",
+  "orderByFieldMap" : {
+    "string" : "string"
+  },
+  "params" : "object"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "code" : "string",
+  "data" : "object",
+  "msg" : "string"
+}
+----
+
+
+
+
+[[_definitions]]
+== 定义
+
+[[_ed87fbc05cdf71a1d850a3da5d0af09f]]
+=== BaseCommPager«DtDepEntity»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**currenRecords** +
+__可选__|当前页码记录数 +
+**样例** : `0`|integer (int32)
+|**pageIndex** +
+__可选__|当前页码 +
+**样例** : `0`|integer (int32)
+|**pageSize** +
+__可选__|每页容量 +
+**样例** : `0`|integer (int32)
+|**records** +
+__可选__|数据记录 +
+**样例** : `[ "<<_dtdepentity>>" ]`|< <<_dtdepentity,DtDepEntity>> > array
+|**totalPage** +
+__可选__|总页数 +
+**样例** : `0`|integer (int32)
+|**totalRecord** +
+__可选__|总条数 +
+**样例** : `0`|integer (int64)
+|===
+
+
+[[_e659e6d7bc9d5f7f523e2ff05e1834de]]
+=== BasePageSearch«DtDepEntity»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**count** +
+__可选__|是否查询数据总条数,默认false +
+**样例** : `true`|boolean
+|**orderBy** +
+__可选__|排序字段 +
+**样例** : `"XXX desc,XXX asc"`|string
+|**pageFlag** +
+__可选__|是否分页,默认true +
+**样例** : `true`|boolean
+|**pageIndex** +
+__可选__|页码,默认1 +
+**样例** : `1`|integer (int32)
+|**pageSize** +
+__可选__|每页条数,默认20 +
+**样例** : `20`|integer (int32)
+|**search** +
+__可选__|查询条件主体 +
+**样例** : `"<<_dtdepentity>>"`|<<_dtdepentity,DtDepEntity>>
+|===
+
+
+[[_dtdepentity]]
+=== DtDepEntity
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**depDomain** +
+__必填__|**长度** : `0 - 1`**样例** : `"test"`|string
+|**depLx** +
+__必填__|**样例** : `-1`|integer (int32)
+|**depName** +
+__必填__|**长度** : `0 - 50`**样例** : `"test"`|string
+|**depNo** +
+__必填__|**长度** : `0 - 50`**样例** : `"test"`|string
+|**depNoAdd** +
+__必填__|**长度** : `0 - 50`**样例** : `"test"`|string
+|**depNoParent** +
+__必填__|**长度** : `0 - 50`**样例** : `"test"`|string
+|**depOrder** +
+__必填__|**样例** : `-1`|integer (int32)
+|**depParent** +
+__必填__|**样例** : `-1`|integer (int32)
+|**depRegserial** +
+__必填__|**长度** : `0 - 50`**样例** : `"test"`|string
+|**depRule** +
+__必填__|**长度** : `0 - 10`**样例** : `"test"`|string
+|**depSerial** +
+__必填__|**样例** : `-1`|integer (int64)
+|**depTeachserial** +
+__必填__|**样例** : `-1`|integer (int32)
+|**dicFmtMap** +
+__可选__|**样例** : `{
+  "string" : "string"
+}`|< string, string > map
+|**id** +
+__必填__|**样例** : `-1`|integer (int32)
+|**jzDtAbbreviation** +
+__必填__|**长度** : `0 - 50`**样例** : `"test"`|string
+|**keys** +
+__可选__|**样例** : `"string"`|string
+|**orderByFieldMap** +
+__可选__|**样例** : `{
+  "string" : "string"
+}`|< string, string > map
+|**params** +
+__可选__|**样例** : `"object"`|object
+|===
+
+
+[[_72f652c6f6764dd112faf921e8b8b650]]
+=== JsonResult«BaseCommPager«DtDepEntity»»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|状态码 +
+**样例** : `"string"`|string
+|**data** +
+__可选__|具体的业务数据 +
+**样例** : `"<<_ed87fbc05cdf71a1d850a3da5d0af09f>>"`|<<_ed87fbc05cdf71a1d850a3da5d0af09f,BaseCommPager«DtDepEntity»>>
+|**msg** +
+__可选__|状态码描述信息 +
+**样例** : `"string"`|string
+|===
+
+
+[[_4916a8ffd119677f44f3d387b249ccd6]]
+=== JsonResult«DtDepEntity»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|状态码 +
+**样例** : `"string"`|string
+|**data** +
+__可选__|具体的业务数据 +
+**样例** : `"<<_dtdepentity>>"`|<<_dtdepentity,DtDepEntity>>
+|**msg** +
+__可选__|状态码描述信息 +
+**样例** : `"string"`|string
+|===
+
+
+[[_c0930cffa50ed00527a165e6938f7a78]]
+=== JsonResult«List«DtDepEntity»»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|状态码 +
+**样例** : `"string"`|string
+|**data** +
+__可选__|具体的业务数据 +
+**样例** : `[ "<<_dtdepentity>>" ]`|< <<_dtdepentity,DtDepEntity>> > array
+|**msg** +
+__可选__|状态码描述信息 +
+**样例** : `"string"`|string
+|===
+
+
+[[_3625c36a8ea9cf7285b4f7df3f9f33df]]
+=== JsonResult«object»
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|名称|说明|类型
+|**code** +
+__可选__|状态码 +
+**样例** : `"string"`|string
+|**data** +
+__可选__|具体的业务数据 +
+**样例** : `"object"`|object
+|**msg** +
+__可选__|状态码描述信息 +
+**样例** : `"string"`|string
+|===
+
+
+
+
+
